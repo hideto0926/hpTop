@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>hideto — Apps / アプリ一覧</title>
-<meta name="description" content="Apps by hideto. Indie iOS apps — superMosaic, BeatShuffle, Barcode Pocket, MahjongEye, 30minTimer. hideto が作る iOS アプリの一覧ページ。" />
+<meta name="description" content="Apps by hideto. Indie iOS apps — Rain Cam, superMosaic, BeatShuffle, BarcodeClip, MahjongEye, 30minTimer. hideto が作る iOS アプリの一覧ページ。" />
 <meta name="theme-color" content="#0b0b1a" />
 
 <!-- Open Graph -->
@@ -120,6 +120,7 @@
   }
   .card::before{ /* gradient sheen border glow */
     content:""; position:absolute; inset:0; border-radius:var(--radius); padding:1px;
+    pointer-events:none; /* don't block clicks on the buttons underneath */
     background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue),var(--gold));
     -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
     -webkit-mask-composite:xor; mask-composite:exclude;
@@ -199,6 +200,26 @@
   </header>
 
   <main class="grid" id="grid">
+    <!-- Rain Cam -->
+    <article class="card">
+      <div class="card-head">
+        <img class="icon" src="assets/raincam.png" alt="Rain Cam" loading="lazy" />
+        <div>
+          <h2>Rain Cam</h2>
+          <span class="badge web">Coming soon</span>
+        </div>
+      </div>
+      <p class="tag">
+        <span class="lang-ja">ライブのカメラ映像に、本物のような雨粒。ガラスを伝って流れ落ち、景色を屈折させます。傾けて流れを変え、写真・動画も撮影。</span>
+        <span class="lang-en">Realistic raindrops over your live camera — they run down the glass and refract the view. Tilt to change the flow, then capture photos & videos.</span>
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://hideto0926.github.io/RainDropCam/">
+          <span class="lang-ja">ページを見る</span><span class="lang-en">View page</span>
+        </a>
+      </div>
+    </article>
+
     <!-- superMosaic -->
     <article class="card">
       <div class="card-head">
@@ -244,10 +265,10 @@
     <!-- Barcode Pocket -->
     <article class="card">
       <div class="card-head">
-        <img class="icon" src="assets/barcodepocket.png" alt="Barcode Pocket" loading="lazy" />
+        <img class="icon" src="assets/barcodepocket.png" alt="BarcodeClip" loading="lazy" />
         <div>
-          <h2>Barcode Pocket</h2>
-          <span class="badge web">Coming soon</span>
+          <h2>BarcodeClip</h2>
+          <span class="badge live">App Store</span>
         </div>
       </div>
       <p class="tag">
@@ -258,6 +279,7 @@
         <a class="btn btn-primary" href="https://hideto0926.github.io/barcodeClip/">
           <span class="lang-ja">ページを見る</span><span class="lang-en">View page</span>
         </a>
+        <a class="btn btn-ghost" href="https://apps.apple.com/jp/app/barcodeclip/id6782431475">App Store</a>
       </div>
     </article>
 
@@ -287,7 +309,7 @@
         <img class="icon" src="assets/30mintimer.png" alt="30minTimer" loading="lazy" />
         <div>
           <h2>30minTimer</h2>
-          <span class="badge web">Coming soon</span>
+          <span class="badge live">App Store</span>
         </div>
       </div>
       <p class="tag">
@@ -298,6 +320,7 @@
         <a class="btn btn-primary" href="https://hideto0926.github.io/30minTimer/">
           <span class="lang-ja">ページを見る</span><span class="lang-en">View page</span>
         </a>
+        <a class="btn btn-ghost" href="https://apps.apple.com/jp/app/30mintimer/id6780185941">App Store</a>
       </div>
     </article>
   </main>
